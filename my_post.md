@@ -57,7 +57,7 @@ graph TD
     style B fill:#f3e5f5,color:#000000
     style C fill:#e8f5e8,color:#000000
     style D fill:#fff3e0,color:#000000
-    style E fill:#fce4ec,color:#0000Chjanged 00
+    style E fill:#fce4ec,color:#000000
     style H fill:#ffebee,color:#000000
     style J fill:#f1f8e9,color:#000000
 ```
