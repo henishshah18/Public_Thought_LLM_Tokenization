@@ -53,13 +53,13 @@ graph TD
     
     I --> J["Neural Network Processing<br/>(Embeddings → Attention → Output)"]
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-    style E fill:#fce4ec
-    style H fill:#ffebee
-    style J fill:#f1f8e9
+    style A fill:#e1f5fe,color:#000000
+    style B fill:#f3e5f5,color:#000000
+    style C fill:#e8f5e8,color:#000000
+    style D fill:#fff3e0,color:#000000
+    style E fill:#fce4ec,color:#0000Chjanged 00
+    style H fill:#ffebee,color:#000000
+    style J fill:#f1f8e9,color:#000000
 ```
 
 Here's something that might surprise you: when you pay for GPT-4 or Claude, you're not paying per word or per question – you're paying per token. This isn't arbitrary; it reflects the fundamental reality that every aspect of AI operation scales directly with token count.
