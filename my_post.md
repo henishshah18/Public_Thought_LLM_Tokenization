@@ -35,17 +35,17 @@ Created for multilingual applications, SentencePiece makes no assumptions about 
 
 ```mermaid
 graph TD
-    A["Input Text:<br/>'The cat sat on the mat'"] --> B[Tokenization Process]
+    A["Input Text:<br/>'The cat sat on the mat because it was tired.'"] --> B[Tokenization Process]
     
     B --> C[BPE Algorithm]
     B --> D[WordPiece Algorithm] 
     B --> E[SentencePiece Algorithm]
     
-    C --> F["BPE Tokens:<br/>['The', 'Ġcat', 'Ġsat', 'Ġon', 'Ġthe', 'Ġmat']<br/>Space: Ġ prefix<br/>Count: 6 tokens"]
+    C --> F["BPE Tokens (GPT-2):<br/>['The', 'Ġcat', 'Ġsat', 'Ġon', 'Ġthe', 'Ġmat',<br/>'Ġbecause', 'Ġit', 'Ġwas', 'Ġtired', '.']<br/>Space: Ġ prefix<br/>Count: 11 tokens"]
     
-    D --> G["WordPiece Tokens:<br/>['the', 'cat', 'sat', 'on', 'the', 'mat']<br/>Space: natural word boundaries<br/>Count: 6 tokens"]
+    D --> G["WordPiece Tokens (BERT):<br/>['the', 'cat', 'sat', 'on', 'the', 'mat',<br/>'because', 'it', 'was', 'tired', '.']<br/>Space: natural word boundaries<br/>Count: 11 tokens"]
     
-    E --> H["SentencePiece Tokens:<br/>['▁The', '▁cat', '▁sat', '▁on', '▁the', '▁mat']<br/>Space: ▁ prefix<br/>Count: 6 tokens"]
+    E --> H["SentencePiece Tokens (T5):<br/>['▁The', '▁cat', '▁', 's', 'at', '▁on', '▁the',<br/>'▁mat', '▁because', '▁it', '▁was', '▁tired', '.']<br/>Space: ▁ prefix<br/>Count: 13 tokens (+18% vs others)"]
     
     F --> I[Token IDs]
     G --> I
@@ -58,6 +58,7 @@ graph TD
     style C fill:#e8f5e8
     style D fill:#fff3e0
     style E fill:#fce4ec
+    style H fill:#ffebee
     style J fill:#f1f8e9
 ```
 
